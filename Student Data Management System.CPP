@@ -252,7 +252,7 @@ class FE : public Engg
 	setaddr();
 	setmb();
 	seteid();
-	clrscr();
+	system("CLS");
 	cout<<"\n Acadmic Information :\n";
 	setdept();
 	setprn();
@@ -261,7 +261,7 @@ class FE : public Engg
     }
     void getinfo()
     {
-	clrscr();
+	system("CLS");
 	cout<<"\n Personal Information \n";
 	cout<<"\n Full Name\t: ";  fullname();
 	cout<<"\n Birth Date\t: "<<getbd();
@@ -370,12 +370,12 @@ void saved();
 void editmenu();
 void record();
 
-void main ()
+int main ()
 {
     int ch, i;
     FE fe[60];
 
-    do{ mainmenu :    clrscr();
+    do{ mainmenu :    system("CLS");
 	cout<<"\n\n======= MAIN MENU =======";
 	cout<<"\n\n 1. Student";
 	cout<<"\n 2. Employee";
@@ -385,7 +385,7 @@ void main ()
 
 	switch(ch)
 	{
-	    case 1: do{ studmenu :    clrscr();
+	    case 1: do{ studmenu :    system("CLS");
 			cout<<"\n\n===== STUDENT MENU =====";
 			cout<<"\n\n 1. BSc Student";
 			cout<<"\n 2. BCA Student";
@@ -397,7 +397,7 @@ void main ()
 
 			switch(ch)
 			{
-			    case 1: do{ clrscr();
+			    case 1: do{ system("CLS");
 					cout<<"\n\n======= BSC MENU =======";
 					cout<<"\n\n 1. FYBSc Student";
 					cout<<"\n 2. SYBSc Student";
@@ -409,7 +409,7 @@ void main ()
 				    }while(ch>5);
 				    break;
 
-			    case 2: do{ clrscr();
+			    case 2: do{ system("CLS");
 					cout<<"\n\n======= BCA MENU =======";
 					cout<<"\n\n 1. FYBCA Student";
 					cout<<"\n 2. SYBCA Student";
@@ -422,7 +422,7 @@ void main ()
 				    break;
 
 			    case 3: do{ enggmenu :
-					clrscr();
+					system("CLS");
 					cout<<"\n\n===== ENGNEERING MENU =====";
 					cout<<"\n\n 1. FE Student";
 					cout<<"\n 2. SE Student";
@@ -437,7 +437,7 @@ void main ()
 					{
 					    case 1:
 							FEstud:
-							do{  clrscr();
+							do{  system("CLS");
 							cout<<"\n\n====== FE STUDENT ======";
 							record();
 							cin>>ch;
@@ -445,7 +445,7 @@ void main ()
 							switch(ch)
 							{
 
-							    case 1: clrscr();
+							    case 1: system("CLS");
 								    cout<<"\n Enter Roll Number : ";
 								    cin>>i;
 								    fe[i].set_rn(i);
@@ -453,7 +453,7 @@ void main ()
 								    saved();
 								    goto FEstud;
 
-							    case 2: clrscr();
+							    case 2: system("CLS");
 								    cout<<"\n Enter Roll Number : ";
 								    cin>>i;
 								    if(fe[i].checkrn(i)==0)
@@ -465,7 +465,7 @@ void main ()
 									fe[i].getinfo();
 								    goto FEstud;
 
-							    case 3: clrscr();
+							    case 3: system("CLS");
 								    cout<<"\n Enter Roll Number : ";
 								    cin>>i;
 								    if(fe[i].checkrn(i)==0)
@@ -482,57 +482,57 @@ void main ()
 
 									switch(ch)
 									{
-										case 1: clrscr();
+										case 1: system("CLS");
 											fe[i].editfn();
 											saved();
 											goto editmenu;
 
-										case 2: clrscr();
+										case 2: system("CLS");
 											fe[i].editmn();
 											saved();
 											goto editmenu;
 
-										case 3: clrscr();
+										case 3: system("CLS");
 											fe[i].editln();
 											saved();
 											goto editmenu;
 
-										case 4: clrscr();
+										case 4: system("CLS");
 											fe[i].editbd();
 											saved();
 											goto editmenu;
 
-										case 5: clrscr();
+										case 5: system("CLS");
 											fe[i].editmb();
 											saved();
 											goto editmenu;
 
-										case 6: clrscr();
+										case 6: system("CLS");
 											fe[i].editeid();
 											saved();
 											goto editmenu;
 
-										case 7: clrscr();
+										case 7: system("CLS");
 											fe[i].editaddr();
 											saved();
 											goto editmenu;
 
-										case 8: clrscr();
+										case 8: system("CLS");
 											fe[i].editdept();
 											saved();
 											goto editmenu;
 
-										case 9: clrscr();
+										case 9: system("CLS");
 											fe[i].editprn();
 											saved();
 											goto editmenu;
 
-										case 10: clrscr();
+										case 10: system("CLS");
 											 fe[i].editpaidf();
 											 saved();
 											 goto editmenu;
 
-										case 11: clrscr();
+										case 11: system("CLS");
 											 fe[i].editmark();
 											 saved();
 											 goto editmenu;
@@ -588,7 +588,7 @@ void main ()
 		    }while(ch>5);
 		    break;
 
-	    case 2: do{ clrscr();
+	    case 2: do{ system("CLS");
 			cout<<"\n\n======= EMPLOYEE MENU =======";
 			cout<<"\n\n 1. Wage Employee";
 			cout<<"\n 2. Salaried Employee";
@@ -637,7 +637,7 @@ void record()
 void editmenu()
 {
 
-    clrscr();
+    system("CLS");
     cout<<"\n\n======= EDIT MENU =======";
     cout<<"\n\n 1. First name";
     cout<<"\n 2. Middle name";
